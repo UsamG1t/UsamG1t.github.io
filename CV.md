@@ -1,7 +1,7 @@
 # Степан Мальчевский
 ## Разработчик, системный инженер, преподаватель
 
-**Email:** usamstudent21@gmail.com  
+**Email:** malchevskii.s.a@asvk.cs.msu.ru
 **Телефон:** +7 916 847-1442  
 **GitHub:** [@UsamG1t](https://github.com/UsamG1t)  
 **Город:** Москва
@@ -97,11 +97,11 @@ Python, C/C++, Assembly, SQL
 ## Публикации и выступления
 
 ### Октябрь 2025
-Написание практико-ориентированной документации для Альт Платформы на основе курса «Разработка приложений под Linux»  
+Написание практико-ориентированной документации для Альт Платформы на основе курса «Разработка приложений под Linux».
 [21Dev Conference — Базальт СПО](https://www.basealt.ru/21dev-conf)
 
 ### Март 2025 — Апрель 2025
-Алгоритмы построения энергосберегающего многопроцессорного расписания вычислений
+Алгоритмы построения энергосберегающего многопроцессорного расписания вычислений.
 [Сборник тезисов конференции](https://confhub.ru/file/event/9684/eid9684_attach_70f91aa6d427a2dc1010ab9efb411da4e49c7561.pdf)
 
 ---
@@ -109,14 +109,14 @@ Python, C/C++, Assembly, SQL
 ## Проекты
 
 ### 2026: Серия энергосберегающих планировщиков на базе eBPF
-Разработка высокопроизводительных планировщиков Linux для минимизации энергопотребления. Магистерская работа и курс.
+Разработка высокопроизводительных планировщиков Linux для минимизации энергопотребления. Магистерская работа.
 
 **GitHub:** [AltLinux_EnergySaved_sched-ext](https://github.com/UsamG1t/AltLinux_EnergySaved_sched-ext)
 
 ### 2026: Система управления виртуальными машинами VirtualBox
-Полнофункциональная система управления VirtualBox с интеграцией нейросетевых агентов.
+Полнофункциональная система управления VirtualBox для построения демонстрационных и тестовых топологий.
 
-**GitHub:** [NeuroPysnap](https://github.com/UsamG1t/NeuroPysnap)
+**GitHub:** [NeuroPysnap](https://github.com/UsamG1t/NeuroPysnap) \
 **Online:** [NeuroPysnap on Pages](https://usamg1t.github.io/NeuroPysnap)
 
 ### 2026: Патч SDN-контроллера Ryu
@@ -127,12 +127,12 @@ Python, C/C++, Assembly, SQL
 ### 2026: Краткий курс «Практическое использование Linux»
 Серия обучающих материалов по Linux: от загрузки ОС до работы с сетевыми сервисами. Используется в МГУ и Базальт СПО.
 
-**GitHub:** [Linux_Practic_Usage](https://github.com/UsamG1t/Linux_Practic_Usage)  
+**GitHub:** [Linux_Practic_Usage](https://github.com/UsamG1t/Linux_Practic_Usage) \
 **Online:** [Linux_Practic_Usage on Pages](https://usamg1t.github.io/Linux_Practic_Usage)
 
 ### 2024 — н.в.: Комплекс обучающих материалов ВМК МГУ
 Разработка серии практических материалов по прикладной математике и информатике для факультета вычислительной математики и кибернетики МГУ им. М.В. Ломоносова.
 
-**GitHub:** [UsamG1t](https://github.com/UsamG1t)
+**GitHub:** [UsamG1t](https://github.com/UsamG1t) \
 **Online:** [UsamG1t on Pages](https://usamg1t.github.io)
 

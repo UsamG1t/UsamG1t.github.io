@@ -93,7 +93,7 @@ def convert_refs_in_file(filename):
     ptn = r"\[([A-Z]+):([\w]*):([\w-]+)\]"
     while res := re.search(ptn, content):
         site, user, link = res.group(1, 2, 3)
-        content = content.replace(res.group(), refs_dict[site] + (user if user else refs_dict["default_name"]) + link)
+        content = content.replace(res.group(), "[[" + refs_dict[site] + (user if user else refs_dict["default_name"]) + link + "]]")
 
     if content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
