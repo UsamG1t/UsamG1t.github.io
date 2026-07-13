@@ -124,7 +124,6 @@ def generate_contents(filename):
         return False
 
     toc_lines = [
-        '---',
         ''
         '# Быстрый поиск',
         ''
