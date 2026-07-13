@@ -7,10 +7,7 @@ from unicodedata import lookup
 
 def normalize_anchor(anchor):
     """
-    Преобразует якорь в формат GitHub Pages:
-    - Заменяет %20 на -
-    - Приводит в lowercase
-    - Убирает лишние символы (оставляет только буквы, цифры, дефисы)
+    Преобразует якорь в формат GitHub Pages
     """
     anchor = unquote(anchor)
     
@@ -80,7 +77,9 @@ def convert_emojies_in_file(filepath):
         return False
 
 def convert_refs_in_file(filename):
-
+    """
+    Добавляет поддержку собственных генерируемых ссылок формата [SOURCE:User:page_path]
+    """
     refs_dict = {
         "GT": "https://github.com/",
         "default_name": "UsamG1t/",
@@ -105,7 +104,65 @@ def convert_refs_in_file(filename):
         print(f"  No changes with refs: {filepath}")
         return False
 
+def generate_contents(filename):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    original_content = content
 
+    header_pattern = r'^(#{1,6})\s+(.+)$'
+    headers = []
+
+    for line in content.split('\n'):
+        match = re.match(header_pattern, line)
+        if match:
+            level = len(match.group(1))
+            title = match.group(2).strip()
+            headers.append((level, title))
+
+    if not headers:
+        print(f"  No changes with contents: {filepath}")
+        return False
+
+    toc_lines = [
+        '---',
+        ''
+        '# Быстрый поиск',
+        ''
+    ]
+
+    seen_titles = {}
+
+    for level, title in headers:
+        anchor = unquote(title)
+
+        anchor = re.sub(r'\s+', '-', anchor)
+        anchor = re.sub(r'[`:]', '', anchor)
+
+        anchor = re.sub(r'-+', '-', anchor)
+        anchor = anchor.strip('-').lower()
+
+        if anchor in seen_titles:
+            seen_titles[anchor] += 1
+            anchor = f"{anchor}-{seen_titles[anchor]}"
+        else:
+            seen_titles[anchor] = 1
+
+        indent = ' ' * (2 * (level - 1))
+        toc_lines.append(f'{indent} + [{title}](#{anchor})')
+
+    toc_lines.append('')
+    toc_lines.append('---')
+
+    content = re.sub(r'\[:contents:\]', '\n'.join(toc_lines), content, flags=re.MULTILINE)
+
+    if content != original_content:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"✓ Generate contents: {filepath}")
+        return True
+    else:
+        print(f"  No changes with contents: {filepath}")
+        return False
 
 md_files = [f for f in Path('.').rglob('*.md') if '.git' not in str(f)]
     
@@ -116,6 +173,7 @@ if not md_files:
 changed = 0
 for filepath in sorted(md_files):
     if any([
+        generate_contents(filepath),
         convert_links_in_file(filepath),
         convert_emojies_in_file(filepath),
         convert_refs_in_file(filepath)
