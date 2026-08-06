@@ -82,17 +82,17 @@ def convert_refs_in_file(filename):
     """
     refs_dict = {
         "GT": "https://github.com/",
-        "default_name": "UsamG1t/",
+        "default_name": "UsamG1t",
     }
 
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     original_content = content
 
-    ptn = r"\[([A-Z]+):([\w]*):([\w-]+)\]"
+    ptn = r"\[([A-Z]+):([\w-]*):([\w-]+)\]"
     while res := re.search(ptn, content):
         site, user, link = res.group(1, 2, 3)
-        res_link = refs_dict[site] + (user if user else refs_dict["default_name"]) + link
+        res_link = Path(refs_dict[site]) / (user if user else refs_dict["default_name"]) / link
         content = content.replace(res.group(), f'[{res_link}]({res_link})')
 
     if content != original_content:
