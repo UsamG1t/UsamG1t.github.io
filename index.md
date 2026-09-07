@@ -62,17 +62,20 @@ UsamG1t.github.io — объединённая платформа проекто
 
 **Основные направления**: Linux, Energy Aware Scheduling, системное программирование, системы виртуализации. \
 **Образование**: Полное высшее с отличием, ВМК МГУ им. М.В. Ломоносова, Прикладная математика и информатика: системное программирование и компьютерные науки. \
-**Должность**: Разработчик технической документации, ООО «Базальт СПО»
+**Должность**: Старший разработчик, отдел сопровождения ООО «Базальт СПО»
 
 **Технологический стек**:
 
 | Категория | Навыки |
 |-----------|--------|
-| **Языки программирования** | Python, C/C++, Assembly, SQL |
-| **Linux & System** | Linux Kernel, eBPF, Systemd, etcnet, VirtualBox |
-| **DevOps & Infrastructure** | Docker, Git, GitHub Actions, NGINX, Apache, IIS |
-| **Frameworks & Tools** | FastAPI, DevOps, системы мониторинга |
-| **Special Skills** | Prompt-engineering, Spec-Driven Development, нейросетевые агенты |
+| **Языки программирования**  | Python, C/C++, языки сценариев Unix, Assembler, SQL |
+| **Linux & System**          | Linux Kernel, eBPF, Systemd|
+| **Special Skills**          | Prompt-engineering, Spec-Driven Development |
+| **Network**                 | etcnet, iproute, iptables, nftables|
+| **Virtualization**          | Docker, K8s, VirtualBox, libvirt, QEMU/KVM |
+| **DevOps & Infrastructure** | Git, GitHub Actions, NGINX, Apache, IIS |
+|                             | Zabbix, Prometheus, Grafana |
+| **Frameworks & Tools**      | FastAPI, RestAPI, Frontend-фреймворки |
 
 - **[Полное резюме (CV)](./CV.md)**
 - **[GitHub профиль](https://github.com/UsamG1t)** — все проекты и репозитории
@@ -86,4 +89,4 @@ UsamG1t.github.io — объединённая платформа проекто
 
 ---
 
-*Последнее обновление: август 2026*
+*Последнее обновление: сентябрь 2026*
